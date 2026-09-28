@@ -1,0 +1,560 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f8f9ff","secondary-fixed-dim":"#b4c5ff","primary":"#00236f","inverse-primary":"#b6c4ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-primary-fixed":"#00164e","on-surface-variant":"#444651","inverse-on-surface":"#eaf1ff","tertiary-container":"#384055","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","primary-container":"#1e3a8a","surface-variant":"#d3e4fe","secondary-fixed":"#dbe1ff","surface-tint":"#4059aa","surface-bright":"#f8f9ff","on-background":"#0b1c30","error-container":"#ffdad6","on-primary":"#ffffff","on-secondary-fixed":"#00174b","tertiary":"#222a3e","on-primary-fixed-variant":"#264191","tertiary-fixed":"#dae2fd","surface-dim":"#cbdbf5","on-tertiary-fixed":"#131b2e","on-secondary-fixed-variant":"#003ea8","on-tertiary-container":"#a4acc5","surface-container-highest":"#d3e4fe","outline":"#757682","primary-fixed-dim":"#b6c4ff","error":"#ba1a1a","on-surface":"#0b1c30","secondary-container":"#316bf3","outline-variant":"#c5c5d3","primary-fixed":"#dce1ff","secondary":"#0051d5","on-secondary":"#ffffff","inverse-surface":"#213145","on-primary-container":"#90a8ff","on-tertiary-fixed-variant":"#3f465c","surface-container":"#e5eeff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","on-secondary-container":"#fefcff","surface-container-lowest":"#ffffff","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","margin-lg":"2rem","margin-md":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem","gutter-lg":"1.5rem","space-md":"0.75rem"},fontFamily:{"headline-sm":["Inter"],"display":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-primary-container shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><div class="h-16 w-full px-gutter lg:px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="logo.jfif" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X8ifYx1jW-tCJGjdEIV3SczoNw_6mBKUpyKFSapsCG1XHAaWD-qbgSKH3a0LrKDyuywH2UJwPnnOT9YZ3d6Dy4rVrEbCEYUcpSsvi3e3KLo2srxMMMl6GmR_BVEwhN7vdhMRVqrsAVRMgPDdPFfxpmd1FZfsClVdNrg3K2-OPX5TUJ9FTbMwL9qqULSl55G_M_WFC7E2X4XeZ6_SU8afyFSaECk19eNJEte_QJisYBTx3GePf1Nu_P9UjfCRF9zDICF30KPAgW"><div class="flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight leading-none">StockTI</span><span class="font-label-sm text-label-sm text-on-primary-container leading-tight mt-0.5">Gestão &amp; Requisições de TI</span></div></div><div class="h-6 w-px bg-on-primary/15 hidden lg:block"></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-surface/15 text-on-primary font-label-lg font-semibold rounded-lg"><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="insumos-em-estoque" href="#">Insumos em Estoque</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="nova-solicitacao" href="#">Nova Solicitação</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="minhas-requisicoes" href="#">Minhas Requisições</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="aprovacao-admin" href="#">Aprovação (Admin)</a></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest/20 text-on-primary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span>Supabase Conectado</span></div><div class="hidden sm:flex flex-col items-end"><span class="font-label-sm text-label-sm text-on-primary leading-tight">Carlos Eduardo</span><div class="flex items-center gap-1"><span class="font-body-sm text-body-sm text-on-primary-container">Setor TI</span><span class="px-1.5 py-0.2 rounded bg-surface/20 text-on-primary font-label-sm text-[10px] uppercase font-semibold">Admin</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full">
+<div class="w-full px-gutter lg:px-margin-lg py-margin-md flex flex-col gap-space-xl">
+<!-- Top Bar with Quick Stats & Primary Action -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span>Portal do Colaborador</span>
+<span>/</span>
+<span class="text-secondary font-semibold">Acompanhamento</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Minhas Requisições</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Matrícula: TI-84920 • Carlos Eduardo</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="h-10 pl-9 pr-4 rounded-xl bg-surface-container-lowest shadow-sm text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-low transition-all w-60" id="searchInput" oninput="handleSearch(this.value)" placeholder="Buscar por ID ou item..." type="text">
+</div>
+<a class="h-10 px-space-lg rounded-xl bg-secondary hover:bg-primary-container text-on-secondary font-label-lg text-label-lg flex items-center gap-space-xs shadow-md transition-all active:scale-[0.98]" data-path="nova-solicitacao" href="#">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Fazer Nova Solicitação</span>
+</a>
+</div>
+</div>
+<!-- Quick Status Filter Metric Cards -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md">
+<!-- Todas -->
+<button class="filter-card group text-left p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 ring-2 ring-secondary bg-surface-container-low" id="filter-all" onclick="filterByStatus('all')">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Todas</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">inventory_2</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-semibold">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pedidos</span>
+</div>
+</button>
+<!-- Pendentes -->
+<button class="filter-card group text-left p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5" id="filter-pendente" onclick="filterByStatus('pendente')">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-amber-800">Pendentes</span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-amber-900 font-semibold">2</span>
+<span class="font-body-sm text-body-sm text-amber-700">aguardando</span>
+</div>
+</button>
+<!-- Aprovadas -->
+<button class="filter-card group text-left p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5" id="filter-aprovado" onclick="filterByStatus('aprovado')">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-emerald-800">Aprovadas</span>
+<span class="material-symbols-outlined text-emerald-600 text-[20px]">check_circle</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-emerald-950 font-semibold">1</span>
+<span class="font-body-sm text-body-sm text-emerald-700">em preparo</span>
+</div>
+</button>
+<!-- Entregues -->
+<button class="filter-card group text-left p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5" id="filter-entregue" onclick="filterByStatus('entregue')">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Entregues</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-primary font-semibold">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">concluído</span>
+</div>
+</button>
+<!-- Rejeitadas -->
+<button class="filter-card group text-left p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 opacity-60 col-span-2 md:col-span-1" id="filter-rejeitado" onclick="filterByStatus('rejeitado')">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Rejeitadas</span>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-semibold">0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ocorrências</span>
+</div>
+</button>
+</div>
+<!-- Main Workspace: Split Content Table & Real-time Live Timeline -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Requisitions Master List -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span>Listando</span>
+<span class="font-headline-sm text-headline-sm text-primary" id="renderedCount">4</span>
+<span>solicitações ativas</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Atualizado em tempo real</span>
+</div>
+</div>
+<!-- Order Cards Stream -->
+<div class="flex flex-col gap-space-md" id="requisitionsContainer">
+<!-- Order #REQ-1042 -->
+<div class="requisition-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 flex flex-col gap-space-md border-l-4 border-amber-500 ring-2 ring-secondary/20" data-id="REQ-1042" data-qty="2 pacotes" data-status="pendente" data-step="1" data-title="Resma de Papel A4" onclick="selectRequisition('REQ-1042')">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">description</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Resma de Papel A4</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-semibold">2 pacotes</span>
+</div>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-primary">#REQ-1042</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                      Hoje, 14:20
+                    </span>
+</div>
+</div>
+</div>
+<!-- Status Badge -->
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold tracking-wide bg-amber-50 text-amber-800 ring-1 ring-amber-200 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                Pendente
+              </span>
+</div>
+<!-- Justification text -->
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/70 shrink-0 mt-0.5">chat_bubble_outline</span>
+<p class="leading-relaxed"><strong class="text-on-surface font-label-sm">Justificativa:</strong> "Impressão de relatórios trimestrais do setor fiscal"</p>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-amber-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>Fila de triagem com Almoxarifado</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-error/10 hover:bg-error/20 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); cancelOrder('REQ-1042')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Cancelar Pedido</span>
+</button>
+</div>
+</div>
+<!-- Order #REQ-1039 -->
+<div class="requisition-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 flex flex-col gap-space-md border-l-4 border-amber-500" data-id="REQ-1039" data-qty="1 un" data-status="pendente" data-step="1" data-title="Mouse USB Óptico" onclick="selectRequisition('REQ-1039')">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">mouse</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Mouse USB Óptico</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-semibold">1 un</span>
+</div>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-primary">#REQ-1039</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                      Ontem, 09:15
+                    </span>
+</div>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold tracking-wide bg-amber-50 text-amber-800 ring-1 ring-amber-200 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                Pendente
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/70 shrink-0 mt-0.5">chat_bubble_outline</span>
+<p class="leading-relaxed"><strong class="text-on-surface font-label-sm">Justificativa:</strong> "Mouse do usuário atual falhando clique esquerdo"</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-amber-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Avaliação de garantia em andamento</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-error/10 hover:bg-error/20 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); cancelOrder('REQ-1039')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Cancelar Pedido</span>
+</button>
+</div>
+</div>
+<!-- Order #REQ-1025 -->
+<div class="requisition-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 flex flex-col gap-space-md border-l-4 border-emerald-500" data-id="REQ-1025" data-qty="1 un" data-status="aprovado" data-step="2" data-title="Teclado ABNT2 USB" onclick="selectRequisition('REQ-1025')">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">keyboard</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Teclado ABNT2 USB</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-semibold">1 un</span>
+</div>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-primary">#REQ-1025</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event</span>
+                      12/03/2025
+                    </span>
+</div>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold tracking-wide bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                Aprovado
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/70 shrink-0 mt-0.5">chat_bubble_outline</span>
+<p class="leading-relaxed"><strong class="text-on-surface font-label-sm">Justificativa:</strong> "Substituição para nova estação de trabalho"</p>
+</div>
+<div class="p-space-sm rounded-lg bg-emerald-50/70 flex items-center gap-space-sm text-emerald-900 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">storefront</span>
+<span class="font-semibold">Observação do Suporte:</span>
+<span>Aguardando retirada no balcão TI (Bancada 03 - Ramal 4022)</span>
+</div>
+</div>
+<!-- Order #REQ-1010 -->
+<div class="requisition-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 flex flex-col gap-space-md border-l-4 border-secondary" data-id="REQ-1010" data-qty="1 un" data-status="entregue" data-step="3" data-title="Toner Impressora HP Laser" onclick="selectRequisition('REQ-1010')">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">print</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Toner Impressora HP Laser</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-semibold">1 un</span>
+</div>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-primary">#REQ-1010</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event</span>
+                      05/03/2025
+                    </span>
+</div>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold tracking-wide bg-secondary-fixed/50 text-primary font-bold ring-1 ring-secondary/20 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">done_all</span>
+                Entregue
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/70 shrink-0 mt-0.5">chat_bubble_outline</span>
+<p class="leading-relaxed"><strong class="text-on-surface font-label-sm">Justificativa:</strong> "Toner setor contábil em nível crítico"</p>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Recebido e assinado digitalmente por Carlos E.</span>
+</div>
+<span class="text-[11px] text-on-surface-variant/80 font-mono">HASH: 8F2A-99B1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail & Dynamic Visual Tracking Timeline (Sidebar Panel) -->
+<div class="lg:col-span-5 xl:col-span-4 sticky top-24 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-high">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Linha do Tempo em Tempo Real</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5" id="detailTitle">Resma de Papel A4</h2>
+</div>
+<div class="px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold bg-amber-50 text-amber-800" id="detailBadge">
+              #REQ-1042
+            </div>
+</div>
+<!-- Interactive Process Tracker (Nodes Connected) -->
+<div class="relative flex flex-col gap-space-lg pl-3 my-1">
+<!-- Connecting vertical line -->
+<div class="absolute left-[19px] top-3 bottom-5 w-0.5 bg-surface-container-highest"></div>
+<!-- Step 1: Solicitado -->
+<div class="relative flex items-start gap-space-md group" id="step-node-0">
+<div class="step-indicator w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 z-10 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Solicitado</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-[10px] text-on-surface-variant">Concluído</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="detailDate1">Hoje, 14:20 • Criado por Carlos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px] mt-0.5">Disparado alerta para a equipe de Logística de TI</span>
+</div>
+</div>
+<!-- Step 2: Em Análise -->
+<div class="relative flex items-start gap-space-md group" id="step-node-1">
+<div class="step-indicator w-8 h-8 rounded-full bg-amber-500 text-on-primary flex items-center justify-center shrink-0 z-10 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-amber-900 font-semibold">Em Análise Técnica</span>
+<span class="px-1.5 py-0.2 rounded bg-amber-100 font-label-sm text-[10px] text-amber-800">Fase Atual</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="detailDate2">Fila de Prioridade Normal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px] mt-0.5">Almoxarifado checando saldos no estoque central</span>
+</div>
+</div>
+<!-- Step 3: Aprovado -->
+<div class="relative flex items-start gap-space-md group opacity-45" id="step-node-2">
+<div class="step-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Aprovado pelo Gestor</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="detailDate3">Pendente de assinatura</span>
+</div>
+</div>
+<!-- Step 4: Entregue -->
+<div class="relative flex items-start gap-space-md group opacity-45" id="step-node-3">
+<div class="step-indicator w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[18px]">package_2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Entregue / Retirado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="detailDate4">Finalização de protocolo</span>
+</div>
+</div>
+</div>
+<!-- Protocol & Technical Ledger Details -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Unidade Requisitante:</span>
+<span class="font-semibold text-on-surface">Prédio Administrativo - 2º Andar</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Centro de Custo:</span>
+<span class="font-semibold text-on-surface">CC-0941 (Controladoria)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Nível de Criticidade:</span>
+<span class="font-semibold text-secondary">Padrão (SLA 24h)</span>
+</div>
+</div>
+<!-- Direct Helpdesk Link -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span>Dúvidas com esta entrega?</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-0.5 underline">
+              Falar no Ramal 4022
+            </button>
+</div>
+</div>
+<!-- Informative StockTI Hint Banner -->
+<div class="p-space-md rounded-xl bg-gradient-to-r from-primary-container to-primary text-on-primary shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">tips_and_updates</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-secondary-fixed">Retiradas no Balcão TI</span>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-0.5 leading-snug">Pedidos com status 'Aprovado' ficam disponíveis para retirada rápida em até 48 horas úteis.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation -->
+<div class="fixed bottom-6 right-6 hidden transform transition-all duration-300 z-50" id="toastNotification">
+<div class="flex items-center gap-space-md px-space-lg py-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toastMessage">Pedido cancelado com sucesso.</span>
+<button class="ml-2 text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="hideToast()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<script>
+    const orderDetails = {
+      'REQ-1042': {
+        title: 'Resma de Papel A4',
+        id: '#REQ-1042',
+        status: 'pendente',
+        step: 1,
+        date1: 'Hoje, 14:20 • Criado por Carlos',
+        date2: 'Fila de Prioridade Normal',
+        date3: 'Aguardando avaliação',
+        date4: 'Pendente de liberação'
+      },
+      'REQ-1039': {
+        title: 'Mouse USB Óptico',
+        id: '#REQ-1039',
+        status: 'pendente',
+        step: 1,
+        date1: 'Ontem, 09:15 • Criado por Carlos',
+        date2: 'Triagem de hardware defeituoso',
+        date3: 'Aguardando parecer de bancada',
+        date4: 'Pendente de liberação'
+      },
+      'REQ-1025': {
+        title: 'Teclado ABNT2 USB',
+        id: '#REQ-1025',
+        status: 'aprovado',
+        step: 2,
+        date1: '12/03/2025, 08:30 • Solicitado',
+        date2: '12/03/2025, 10:14 • Aprovado p/ Roberto M.',
+        date3: 'Pronto para Retirada no Balcão 03',
+        date4: 'Aguardando retirada pelo colaborador'
+      },
+      'REQ-1010': {
+        title: 'Toner Impressora HP Laser',
+        id: '#REQ-1010',
+        status: 'entregue',
+        step: 3,
+        date1: '05/03/2025, 11:00 • Solicitado',
+        date2: '05/03/2025, 14:22 • Aprovado',
+        date3: '06/03/2025, 09:10 • Separado no estoque',
+        date4: '06/03/2025, 15:40 • Entregue no Setor Contábil'
+      }
+    };
+
+    function selectRequisition(reqId) {
+      const data = orderDetails[reqId];
+      if (!data) return;
+
+      // Highlight active card
+      document.querySelectorAll('.requisition-card').forEach(card => {
+        card.classList.remove('ring-2', 'ring-secondary/20');
+        if (card.dataset.id === reqId) {
+          card.classList.add('ring-2', 'ring-secondary/20');
+        }
+      });
+
+      // Update Detail View Title and Badge
+      document.getElementById('detailTitle').textContent = data.title;
+      const detailBadge = document.getElementById('detailBadge');
+      detailBadge.textContent = data.id;
+
+      // Update Timeline Steps
+      const stepNodes = [
+        document.getElementById('step-node-0'),
+        document.getElementById('step-node-1'),
+        document.getElementById('step-node-2'),
+        document.getElementById('step-node-3')
+      ];
+
+      document.getElementById('detailDate1').textContent = data.date1;
+      document.getElementById('detailDate2').textContent = data.date2;
+      document.getElementById('detailDate3').textContent = data.date3;
+      document.getElementById('detailDate4').textContent = data.date4;
+
+      stepNodes.forEach((node, index) => {
+        const indicator = node.querySelector('.step-indicator');
+        indicator.classList.remove('bg-secondary', 'bg-amber-500', 'bg-emerald-500', 'animate-pulse', 'bg-surface-container-high', 'text-on-secondary', 'text-on-primary', 'text-on-surface-variant');
+
+        if (index < data.step) {
+          node.classList.remove('opacity-45');
+          indicator.classList.add('bg-secondary', 'text-on-secondary');
+          indicator.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>';
+        } else if (index === data.step) {
+          node.classList.remove('opacity-45');
+          if (data.status === 'pendente') {
+            indicator.classList.add('bg-amber-500', 'text-on-primary', 'animate-pulse');
+            indicator.innerHTML = '<span class="material-symbols-outlined text-[18px]">sync</span>';
+          } else if (data.status === 'aprovado') {
+            indicator.classList.add('bg-emerald-500', 'text-on-primary');
+            indicator.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span>';
+          } else if (data.status === 'entregue') {
+            indicator.classList.add('bg-secondary', 'text-on-secondary');
+            indicator.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span>';
+          }
+        } else {
+          node.classList.add('opacity-45');
+          indicator.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      });
+    }
+
+    function filterByStatus(status) {
+      const cards = document.querySelectorAll('.requisition-card');
+      let visibleCount = 0;
+
+      // Update Filter Cards Visual State
+      document.querySelectorAll('.filter-card').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-secondary', 'bg-surface-container-low');
+      });
+      const activeBtn = document.getElementById('filter-' + status);
+      if (activeBtn) {
+        activeBtn.classList.add('ring-2', 'ring-secondary', 'bg-surface-container-low');
+      }
+
+      cards.forEach(card => {
+        if (status === 'all' || card.dataset.status === status) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('renderedCount').textContent = visibleCount;
+    }
+
+    function handleSearch(term) {
+      const query = term.toLowerCase().trim();
+      const cards = document.querySelectorAll('.requisition-card');
+      let count = 0;
+
+      cards.forEach(card => {
+        const id = card.dataset.id.toLowerCase();
+        const title = card.dataset.title.toLowerCase();
+        if (id.includes(query) || title.includes(query)) {
+          card.classList.remove('hidden');
+          count++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('renderedCount').textContent = count;
+    }
+
+    function cancelOrder(id) {
+      if (confirm(`Deseja realmente cancelar a requisição #${id}?`)) {
+        const card = document.querySelector(`[data-id="${id}"]`);
+        if (card) {
+          card.classList.add('opacity-40', 'pointer-events-none');
+          const badge = card.querySelector('span[class*="bg-amber-50"]');
+          if (badge) {
+            badge.className = 'px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold tracking-wide bg-error-container text-on-error-container flex items-center gap-1';
+            badge.innerHTML = '<span class="material-symbols-outlined text-[14px]">cancel</span> Cancelado';
+          }
+          showToast(`Requisição #${id} cancelada com sucesso.`);
+        }
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastMessage').textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        hideToast();
+      }, 4000);
+    }
+
+    function hideToast() {
+      document.getElementById('toastNotification').classList.add('hidden');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-gutter lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div>© 2025 StockTI. Suporte Interno de Infraestrutura e Logística.</div><div class="flex items-center gap-space-md"><span>Central de TI: Ramal 4022</span><span>Versão 2.4.0</span></div></div></footer></body></html>

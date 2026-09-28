@@ -1,0 +1,519 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f8f9ff","secondary-fixed-dim":"#b4c5ff","primary":"#00236f","inverse-primary":"#b6c4ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-primary-fixed":"#00164e","on-surface-variant":"#444651","inverse-on-surface":"#eaf1ff","tertiary-container":"#384055","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","primary-container":"#1e3a8a","surface-variant":"#d3e4fe","secondary-fixed":"#dbe1ff","surface-tint":"#4059aa","surface-bright":"#f8f9ff","on-background":"#0b1c30","error-container":"#ffdad6","on-primary":"#ffffff","on-secondary-fixed":"#00174b","tertiary":"#222a3e","on-primary-fixed-variant":"#264191","tertiary-fixed":"#dae2fd","surface-dim":"#cbdbf5","on-tertiary-fixed":"#131b2e","on-secondary-fixed-variant":"#003ea8","on-tertiary-container":"#a4acc5","surface-container-highest":"#d3e4fe","outline":"#757682","primary-fixed-dim":"#b6c4ff","error":"#ba1a1a","on-surface":"#0b1c30","secondary-container":"#316bf3","outline-variant":"#c5c5d3","primary-fixed":"#dce1ff","secondary":"#0051d5","on-secondary":"#ffffff","inverse-surface":"#213145","on-primary-container":"#90a8ff","on-tertiary-fixed-variant":"#3f465c","surface-container":"#e5eeff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","on-secondary-container":"#fefcff","surface-container-lowest":"#ffffff","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","margin-lg":"2rem","margin-md":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem","gutter-lg":"1.5rem","space-md":"0.75rem"},fontFamily:{"headline-sm":["Inter"],"display":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-primary-container shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><div class="h-16 w-full px-gutter lg:px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="logo.jfif" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X8ifYx1jW-tCJGjdEIV3SczoNw_6mBKUpyKFSapsCG1XHAaWD-qbgSKH3a0LrKDyuywH2UJwPnnOT9YZ3d6Dy4rVrEbCEYUcpSsvi3e3KLo2srxMMMl6GmR_BVEwhN7vdhMRVqrsAVRMgPDdPFfxpmd1FZfsClVdNrg3K2-OPX5TUJ9FTbMwL9qqULSl55G_M_WFC7E2X4XeZ6_SU8afyFSaECk19eNJEte_QJisYBTx3GePf1Nu_P9UjfCRF9zDICF30KPAgW"><div class="flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight leading-none">StockTI</span><span class="font-label-sm text-label-sm text-on-primary-container leading-tight mt-0.5">Gestão &amp; Requisições de TI</span></div></div><div class="h-6 w-px bg-on-primary/15 hidden lg:block"></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-surface/15 text-on-primary font-label-lg font-semibold rounded-lg"><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="insumos-em-estoque" href="#">Insumos em Estoque</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="nova-solicitacao" href="#">Nova Solicitação</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="minhas-requisicoes" href="#">Minhas Requisições</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="aprovacao-admin" href="#">Aprovação (Admin)</a></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest/20 text-on-primary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span>Supabase Conectado</span></div><div class="hidden sm:flex flex-col items-end"><span class="font-label-sm text-label-sm text-on-primary leading-tight">Carlos Eduardo</span><div class="flex items-center gap-1"><span class="font-body-sm text-body-sm text-on-primary-container">Setor TI</span><span class="px-1.5 py-0.2 rounded bg-surface/20 text-on-primary font-label-sm text-[10px] uppercase font-semibold">Admin</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1520px] mx-auto px-gutter lg:px-margin-lg py-space-xl">
+<!-- Top Action & Context Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-primary font-label-sm text-label-sm tracking-wide uppercase font-semibold">Formulário de Pedido Interno</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+            SLA Garantido: 4h
+          </span>
+</div>
+<h1 class="font-display text-display text-on-surface tracking-tight">Solicitar Insumo de TI</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Preencha as especificações abaixo para alocação direta no estoque e despacho logístico da infraestrutura.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-all" data-path="minhas-requisicoes" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Histórico de Chamados</span>
+</a>
+<div class="px-space-md py-space-sm bg-surface-container-low text-on-surface-variant font-label-md text-label-md rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory</span>
+<span>4 Itens Críticos Mapeados</span>
+</div>
+</div>
+</div>
+<!-- Smart Warning Alert Card (Anti-Duplication Business Rule) -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl">
+<div class="p-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md bg-amber-50/70">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center shrink-0 text-amber-800">
+<span class="material-symbols-outlined text-[24px]">warning_amber</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-amber-950 font-bold">Aviso de Regra de Negócio: Solicitação Ativa Detectada</span>
+<span class="px-1.5 py-0.5 rounded-full bg-amber-200/80 text-amber-900 font-label-sm text-[10px] uppercase font-semibold">Duplicidade</span>
+</div>
+<p class="font-body-md text-body-md text-amber-900/90 mt-0.5">
+              Você já possui uma requisição pendente (<strong class="font-semibold text-amber-950">REQ-8902</strong>) para <span class="underline decoration-amber-400 font-medium">Mouse USB Óptico</span> registrada há 2 horas. Evite reenvios duplicados para o mesmo SKU para não congestionar a triagem de TI.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end sm:self-center">
+<a class="px-space-md py-1.5 rounded-lg bg-amber-900 text-white font-label-sm text-label-sm hover:bg-amber-950 transition-colors shadow-sm inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+            Ver REQ-8902
+          </a>
+</div>
+</div>
+</div>
+<!-- Main Grid: Form + Realtime Summary -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Structured Form (8 cols) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg">
+<form class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="requisitionForm" onsubmit="event.preventDefault();">
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment_add</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Dados do Insumo Requisitado</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+              Auditoria de Estoque Ativa
+            </span>
+</div>
+<!-- Section 1: Item & Quantity Selection -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Insumo Dropdown -->
+<div class="md:col-span-8 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="itemSelect">
+<span>Insumo de TI <span class="text-error">*</span></span>
+<span class="hidden px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider" id="stockStatusBadge"></span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#316bf3] outline-none transition-all appearance-none cursor-pointer" id="itemSelect">
+<option disabled="" selected="" value="">Selecione um insumo em catálogo...</option>
+<option data-category="Papelaria / Escritório" data-location="Almoxarifado Central - Prateleira A2" data-name="Resma de Papel A4" data-stock="50" value="papel-a4">Resma de Papel A4 (50 disponíveis)</option>
+<option data-category="Impressão Corporativa" data-location="Almoxarifado TI - Armário Específico T01" data-name="Toner Impressora HP Laser" data-stock="8" value="toner-hp">Toner Impressora HP Laser (8 disponíveis)</option>
+<option data-category="Periféricos &amp; Acessórios" data-location="Bancada TI - Gaveteiro 04" data-name="Mouse USB Óptico" data-stock="15" value="mouse-usb">Mouse USB Óptico (15 disponíveis)</option>
+<option data-category="Periféricos &amp; Acessórios" data-location="Bancada TI - Gaveteiro 05" data-name="Teclado ABNT2 USB" data-stock="12" value="teclado-abnt2">Teclado ABNT2 USB (12 disponíveis)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estoque sincronizado em tempo real via Supabase Database CDC.</p>
+</div>
+<!-- Desired Quantity with Realtime Validation -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="quantityInput">
+<span>Qtd. Desejada <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="maxStockNotice">Máx: -</span>
+</label>
+<div class="relative flex items-center">
+<button class="absolute left-1 w-9 h-9 rounded-md bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" id="btnMinus" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-full h-11 text-center font-headline-sm text-headline-sm text-on-surface bg-surface-container-low rounded-lg focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#316bf3] outline-none transition-all disabled:opacity-50" disabled="" id="quantityInput" max="999" min="1" type="number" value="1">
+<button class="absolute right-1 w-9 h-9 rounded-md bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" id="btnPlus" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<div class="h-4 flex items-center" id="quantityFeedback">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Defina a unidade solicitada</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Department and Urgency -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Department Dropdown -->
+<div class="md:col-span-6 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="deptSelect">Departamento / Setor Solicitante <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#316bf3] outline-none transition-all appearance-none cursor-pointer" id="deptSelect">
+<option selected="" value="TI">Tecnologia da Informação &amp; Infra</option>
+<option value="RH">Recursos Humanos &amp; DP</option>
+<option value="FIN">Controladoria &amp; Financeiro</option>
+<option value="DEV">Engenharia de Software / Desenvolvimento</option>
+<option value="SUP">Atendimento &amp; Suporte ao Cliente</option>
+<option value="OPS">Operações &amp; Logística Corporativa</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Urgency Level Radio Chips -->
+<div class="md:col-span-6 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Grau de Urgência Operacional <span class="text-error">*</span></label>
+<div class="grid grid-cols-3 gap-space-xs h-11">
+<label class="relative flex items-center justify-center cursor-pointer rounded-lg bg-surface-container-low p-1 text-center transition-all hover:bg-surface-container has-[:checked]:bg-surface-container-high has-[:checked]:text-primary has-[:checked]:font-semibold has-[:checked]:shadow-sm">
+<input checked="" class="sr-only" name="urgency" type="radio" value="baixa">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    Baixa
+                  </span>
+</label>
+<label class="relative flex items-center justify-center cursor-pointer rounded-lg bg-surface-container-low p-1 text-center transition-all hover:bg-surface-container has-[:checked]:bg-amber-100 has-[:checked]:text-amber-900 has-[:checked]:font-semibold has-[:checked]:shadow-sm">
+<input class="sr-only" name="urgency" type="radio" value="media">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                    Média
+                  </span>
+</label>
+<label class="relative flex items-center justify-center cursor-pointer rounded-lg bg-surface-container-low p-1 text-center transition-all hover:bg-surface-container has-[:checked]:bg-rose-100 has-[:checked]:text-rose-950 has-[:checked]:font-semibold has-[:checked]:shadow-sm">
+<input class="sr-only" name="urgency" type="radio" value="alta">
+<span class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                    Alta
+                  </span>
+</label>
+</div>
+</div>
+</div>
+<!-- Section 3: Justification Textarea -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="justificationInput">Justificativa do Pedido <span class="text-error">*</span></label>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono" id="charCounter">0 / 250</span>
+</div>
+<textarea class="w-full p-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#316bf3] outline-none transition-all resize-none" id="justificationInput" maxlength="250" placeholder="Ex: Substituição de equipamento avariado na estação #14, integração de novo desenvolvedor contratado, reposição de suprimento para fechamento contábil..." rows="3"></textarea>
+<!-- Quick Chips for Common Reasons -->
+<div class="flex flex-wrap items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Motivos rápidos:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="insertReason('Substituição de periférico danificado em uso diário.')" type="button">Defeito/Avaria</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="insertReason('Onboarding de novo colaborador com entrega de kit de trabalho.')" type="button">Novo Funcionário</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="insertReason('Reposição emergencial para término de relatório de auditoria fiscal.')" type="button">Reposição Crítica</button>
+</div>
+</div>
+<!-- Section 4: Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md bg-surface-container-lowest rounded-lg">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" id="btnReset" type="button">
+<span class="material-symbols-outlined text-[18px]">clear_all</span>
+              Limpar Formulário
+            </button>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md transition-all flex items-center justify-center gap-space-sm group" id="btnSubmit" type="button">
+<span>Enviar Requisição</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">send</span>
+</button>
+</div>
+</form>
+<!-- Supabase Client Query Demonstration Snippet -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">database</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">StockTI • Pipeline de Persistência no Supabase</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono text-[11px] text-on-surface-variant font-medium">schema: public.requisitions</span>
+</div>
+<div class="bg-primary/95 text-inverse-on-surface p-space-md rounded-lg font-mono text-body-sm leading-relaxed overflow-x-auto shadow-inner">
+<div class="flex items-center justify-between text-on-primary-container text-[11px] pb-1 mb-2 border-b border-on-primary/10">
+<span>// client-side mutation triggered upon form submission</span>
+<span class="text-secondary-fixed">@supabase/supabase-js v2.45</span>
+</div>
+<p><span class="text-secondary-fixed">const</span> { <span class="text-inverse-primary">data</span>, <span class="text-inverse-primary">error</span> } = <span class="text-secondary-fixed">await</span> supabase</p>
+<p class="pl-4">.<span class="text-on-primary">from</span>(<span class="text-amber-300">'requisitions'</span>)</p>
+<p class="pl-4">.<span class="text-on-primary">insert</span>([{</p>
+<p class="pl-8 text-on-primary-container">item_sku: <span class="text-amber-300 font-bold" id="codeSku">null</span>,</p>
+<p class="pl-8 text-on-primary-container">quantity: <span class="text-secondary-fixed font-bold" id="codeQty">1</span>,</p>
+<p class="pl-8 text-on-primary-container">department: <span class="text-amber-300" id="codeDept">'TI'</span>,</p>
+<p class="pl-8 text-on-primary-container">urgency: <span class="text-amber-300" id="codeUrgency">'baixa'</span>,</p>
+<p class="pl-8 text-on-primary-container">requester_id: <span class="text-secondary-fixed">'usr_carlos_eduardo'</span>,</p>
+<p class="pl-8 text-on-primary-container">status: <span class="text-amber-300">'pendente'</span>,</p>
+<p class="pl-8 text-on-primary-container">created_at: <span class="text-secondary-fixed">new Date().toISOString()</span></p>
+<p class="pl-4">}])</p>
+<p class="pl-4">.<span class="text-on-primary">select</span>()</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Realtime Summary & IT Protocol Card (4 cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Order Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg sticky top-20 flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Resumo da Solicitação</span>
+<span class="w-7 h-7 rounded-full bg-secondary-fixed text-primary flex items-center justify-center font-label-sm font-bold">TI</span>
+</div>
+<!-- Empty or Populated State -->
+<div class="py-space-xl flex flex-col items-center justify-center text-center px-space-md bg-surface-container-low rounded-lg" id="summaryEmptyState">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">pending_actions</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Nenhum item selecionado</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Selecione um insumo no formulário para visualizar os detalhes de alocação e SLA.</p>
+</div>
+<div class="hidden flex-col gap-space-md" id="summaryContent">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider block" id="summaryCategory">Categoria</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5" id="summaryItemName">Nome do Item</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quantidade</span>
+<span class="font-headline-md text-headline-md text-primary font-bold" id="summaryQuantityBadge">1x</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span id="summaryLocation">Almoxarifado Central</span>
+</div>
+</div>
+<!-- Parameters Grid -->
+<div class="grid grid-cols-2 gap-space-sm font-body-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Setor Solicitante</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5" id="summaryDept">TI</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prioridade</span>
+<span class="font-label-md text-label-md text-emerald-700 font-semibold mt-0.5 uppercase tracking-wide" id="summaryUrgency">Baixa</span>
+</div>
+</div>
+<!-- Visual Flow Indicator -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Tempo médio de aprovação</span>
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+                  Até 4 horas úteis
+                </span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-2/3 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Internal IT Policy & Return Protocol -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">gavel</span>
+<span>Regras de Devolução &amp; Baixa</span>
+</div>
+<ul class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant mt-1 list-disc list-inside">
+<li>Itens duráveis (mouses, teclados) requerem devolução do acessório antigo ou termo de perda patrimonial.</li>
+<li>A liberação física no balcão ocorre mediante assinatura digital ou crachá funcional.</li>
+<li>Baixa contábil direta registrada na respectiva conta do centro de custo do setor.</li>
+</ul>
+</div>
+<!-- Fast Contact IT Support Mini-card -->
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dúvidas com o pedido?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ramal 4022 ou Teams TI</span>
+</div>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold" href="#">Abrir Chat</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initStockRequisition() {
+    const itemSelect = document.getElementById('itemSelect');
+    const quantityInput = document.getElementById('quantityInput');
+    const maxStockNotice = document.getElementById('maxStockNotice');
+    const stockStatusBadge = document.getElementById('stockStatusBadge');
+    const quantityFeedback = document.getElementById('quantityFeedback');
+    const deptSelect = document.getElementById('deptSelect');
+    const justificationInput = document.getElementById('justificationInput');
+    const charCounter = document.getElementById('charCounter');
+    const btnMinus = document.getElementById('btnMinus');
+    const btnPlus = document.getElementById('btnPlus');
+    const btnReset = document.getElementById('btnReset');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    // Summary Elements
+    const summaryEmpty = document.getElementById('summaryEmptyState');
+    const summaryContent = document.getElementById('summaryContent');
+    const summaryCategory = document.getElementById('summaryCategory');
+    const summaryItemName = document.getElementById('summaryItemName');
+    const summaryQuantityBadge = document.getElementById('summaryQuantityBadge');
+    const summaryLocation = document.getElementById('summaryLocation');
+    const summaryDept = document.getElementById('summaryDept');
+    const summaryUrgency = document.getElementById('summaryUrgency');
+
+    // Query Snippet Elements
+    const codeSku = document.getElementById('codeSku');
+    const codeQty = document.getElementById('codeQty');
+    const codeDept = document.getElementById('codeDept');
+    const codeUrgency = document.getElementById('codeUrgency');
+
+    function getCurrentUrgency() {
+      const checked = document.querySelector('input[name="urgency"]:checked');
+      return checked ? checked.value : 'baixa';
+    }
+
+    function updateSummary() {
+      const selectedOption = itemSelect.options[itemSelect.selectedIndex];
+      const hasItem = selectedOption && selectedOption.value !== '';
+      const qty = parseInt(quantityInput.value, 10) || 1;
+      const deptText = deptSelect.options[deptSelect.selectedIndex].text;
+      const urgencyVal = getCurrentUrgency();
+
+      // Update snippet
+      codeQty.textContent = qty;
+      codeDept.textContent = `'${deptSelect.value}'`;
+      codeUrgency.textContent = `'${urgencyVal}'`;
+
+      if (!hasItem) {
+        summaryEmpty.classList.remove('hidden');
+        summaryContent.classList.add('hidden');
+        codeSku.textContent = 'null';
+        return;
+      }
+
+      summaryEmpty.classList.add('hidden');
+      summaryContent.classList.remove('hidden');
+
+      const itemName = selectedOption.getAttribute('data-name');
+      const itemCategory = selectedOption.getAttribute('data-category');
+      const itemLocation = selectedOption.getAttribute('data-location');
+      const maxStock = parseInt(selectedOption.getAttribute('data-stock'), 10);
+
+      codeSku.textContent = `'${selectedOption.value}'`;
+      summaryCategory.textContent = itemCategory;
+      summaryItemName.textContent = itemName;
+      summaryQuantityBadge.textContent = `${qty}x`;
+      summaryLocation.textContent = itemLocation;
+      summaryDept.textContent = deptSelect.value;
+      summaryUrgency.textContent = urgencyVal;
+
+      if (urgencyVal === 'alta') {
+        summaryUrgency.className = 'font-label-md text-label-md text-rose-700 font-semibold mt-0.5 uppercase tracking-wide';
+      } else if (urgencyVal === 'media') {
+        summaryUrgency.className = 'font-label-md text-label-md text-amber-700 font-semibold mt-0.5 uppercase tracking-wide';
+      } else {
+        summaryUrgency.className = 'font-label-md text-label-md text-emerald-700 font-semibold mt-0.5 uppercase tracking-wide';
+      }
+    }
+
+    function handleItemChange() {
+      const selectedOption = itemSelect.options[itemSelect.selectedIndex];
+      if (!selectedOption || !selectedOption.value) {
+        quantityInput.disabled = true;
+        quantityInput.value = 1;
+        maxStockNotice.textContent = 'Máx: -';
+        stockStatusBadge.classList.add('hidden');
+        quantityFeedback.innerHTML = '<span class="font-body-sm text-body-sm text-on-surface-variant">Selecione um item primeiro</span>';
+        updateSummary();
+        return;
+      }
+
+      const stock = parseInt(selectedOption.getAttribute('data-stock'), 10);
+      quantityInput.disabled = false;
+      quantityInput.max = stock;
+      if (parseInt(quantityInput.value, 10) > stock) {
+        quantityInput.value = stock;
+      }
+      maxStockNotice.textContent = `Máx: ${stock}`;
+
+      stockStatusBadge.classList.remove('hidden');
+      if (stock <= 10) {
+        stockStatusBadge.className = 'px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-rose-100 text-rose-900 border border-rose-200';
+        stockStatusBadge.textContent = `Apenas ${stock} em estoque`;
+      } else {
+        stockStatusBadge.className = 'px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-900 border border-emerald-200';
+        stockStatusBadge.textContent = `${stock} Disponíveis`;
+      }
+
+      validateQuantity();
+      updateSummary();
+    }
+
+    function validateQuantity() {
+      const selectedOption = itemSelect.options[itemSelect.selectedIndex];
+      if (!selectedOption || !selectedOption.value) return;
+
+      const maxStock = parseInt(selectedOption.getAttribute('data-stock'), 10);
+      let val = parseInt(quantityInput.value, 10);
+
+      if (isNaN(val) || val < 1) {
+        val = 1;
+        quantityInput.value = 1;
+      }
+
+      if (val > maxStock) {
+        quantityInput.value = maxStock;
+        quantityFeedback.innerHTML = `<span class="font-body-sm text-body-sm text-error flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[15px]">error</span> Limitado ao estoque físico (${maxStock})</span>`;
+      } else {
+        quantityFeedback.innerHTML = `<span class="font-body-sm text-body-sm text-emerald-700 flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">check_circle</span> Quantidade válida (${val} de ${maxStock})</span>`;
+      }
+      updateSummary();
+    }
+
+    btnMinus.addEventListener('click', () => {
+      if (quantityInput.disabled) return;
+      let val = parseInt(quantityInput.value, 10) || 1;
+      if (val > 1) {
+        quantityInput.value = val - 1;
+        validateQuantity();
+      }
+    });
+
+    btnPlus.addEventListener('click', () => {
+      if (quantityInput.disabled) return;
+      const selectedOption = itemSelect.options[itemSelect.selectedIndex];
+      const maxStock = parseInt(selectedOption.getAttribute('data-stock'), 10);
+      let val = parseInt(quantityInput.value, 10) || 0;
+      if (val < maxStock) {
+        quantityInput.value = val + 1;
+        validateQuantity();
+      }
+    });
+
+    itemSelect.addEventListener('change', handleItemChange);
+    quantityInput.addEventListener('input', validateQuantity);
+    deptSelect.addEventListener('change', updateSummary);
+
+    document.querySelectorAll('input[name="urgency"]').forEach(radio => {
+      radio.addEventListener('change', updateSummary);
+    });
+
+    justificationInput.addEventListener('input', () => {
+      charCounter.textContent = `${justificationInput.value.length} / 250`;
+    });
+
+    window.insertReason = function(text) {
+      justificationInput.value = text;
+      charCounter.textContent = `${justificationInput.value.length} / 250`;
+      justificationInput.focus();
+    };
+
+    btnReset.addEventListener('click', () => {
+      document.getElementById('requisitionForm').reset();
+      quantityInput.disabled = true;
+      quantityInput.value = 1;
+      maxStockNotice.textContent = 'Máx: -';
+      stockStatusBadge.classList.add('hidden');
+      quantityFeedback.innerHTML = '<span class="font-body-sm text-body-sm text-on-surface-variant">Defina a unidade solicitada</span>';
+      charCounter.textContent = '0 / 250';
+      updateSummary();
+    });
+
+    btnSubmit.addEventListener('click', () => {
+      if (!itemSelect.value) {
+        alert('Por favor, selecione um insumo de TI válido antes de prosseguir.');
+        itemSelect.focus();
+        return;
+      }
+      if (!justificationInput.value.trim()) {
+        alert('Por favor, insira a justificativa operacional para a solicitação.');
+        justificationInput.focus();
+        return;
+      }
+
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = `
+        <span class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+        <span>Registrando na Fila...</span>
+      `;
+
+      setTimeout(() => {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = `
+          <span>Enviar Requisição</span>
+          <span class="material-symbols-outlined text-[20px]">send</span>
+        `;
+        alert(`Sucesso! Requisição #${Math.floor(1000 + Math.random() * 9000)} cadastrada no Supabase. O suporte de TI notificará seu email em até 4 horas úteis.`);
+        btnReset.click();
+      }, 900);
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-gutter lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div>© 2025 StockTI. Suporte Interno de Infraestrutura e Logística.</div><div class="flex items-center gap-space-md"><span>Central de TI: Ramal 4022</span><span>Versão 2.4.0</span></div></div></footer></body></html>

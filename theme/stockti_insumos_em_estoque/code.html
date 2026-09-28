@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="pt-BR" style="width: 1280px; height: 1120px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f8f9ff","secondary-fixed-dim":"#b4c5ff","primary":"#00236f","inverse-primary":"#b6c4ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-primary-fixed":"#00164e","on-surface-variant":"#444651","inverse-on-surface":"#eaf1ff","tertiary-container":"#384055","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","primary-container":"#1e3a8a","surface-variant":"#d3e4fe","secondary-fixed":"#dbe1ff","surface-tint":"#4059aa","surface-bright":"#f8f9ff","on-background":"#0b1c30","error-container":"#ffdad6","on-primary":"#ffffff","on-secondary-fixed":"#00174b","tertiary":"#222a3e","on-primary-fixed-variant":"#264191","tertiary-fixed":"#dae2fd","surface-dim":"#cbdbf5","on-tertiary-fixed":"#131b2e","on-secondary-fixed-variant":"#003ea8","on-tertiary-container":"#a4acc5","surface-container-highest":"#d3e4fe","outline":"#757682","primary-fixed-dim":"#b6c4ff","error":"#ba1a1a","on-surface":"#0b1c30","secondary-container":"#316bf3","outline-variant":"#c5c5d3","primary-fixed":"#dce1ff","secondary":"#0051d5","on-secondary":"#ffffff","inverse-surface":"#213145","on-primary-container":"#90a8ff","on-tertiary-fixed-variant":"#3f465c","surface-container":"#e5eeff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","on-secondary-container":"#fefcff","surface-container-lowest":"#ffffff","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","margin-lg":"2rem","margin-md":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem","gutter-lg":"1.5rem","space-md":"0.75rem"},fontFamily:{"headline-sm":["Inter"],"display":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-primary-container shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><div class="h-16 w-full px-gutter lg:px-margin-lg flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="logo.jfif" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X8ifYx1jW-tCJGjdEIV3SczoNw_6mBKUpyKFSapsCG1XHAaWD-qbgSKH3a0LrKDyuywH2UJwPnnOT9YZ3d6Dy4rVrEbCEYUcpSsvi3e3KLo2srxMMMl6GmR_BVEwhN7vdhMRVqrsAVRMgPDdPFfxpmd1FZfsClVdNrg3K2-OPX5TUJ9FTbMwL9qqULSl55G_M_WFC7E2X4XeZ6_SU8afyFSaECk19eNJEte_QJisYBTx3GePf1Nu_P9UjfCRF9zDICF30KPAgW"><div class="flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight leading-none">StockTI</span><span class="font-label-sm text-label-sm text-on-primary-container leading-tight mt-0.5">Gestão &amp; Requisições de TI</span></div></div><div class="h-6 w-px bg-on-primary/15 hidden lg:block"></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-surface/15 text-on-primary font-label-lg font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-surface/15 text-on-primary font-label-lg font-semibold rounded-lg" data-path="insumos-em-estoque" href="#">Insumos em Estoque</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="nova-solicitacao" href="#">Nova Solicitação</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="minhas-requisicoes" href="#">Minhas Requisições</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-surface/10 rounded-lg transition-colors" data-path="aprovacao-admin" href="#">Aprovação (Admin)</a></nav></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest/20 text-on-primary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span>Supabase Conectado</span></div><div class="hidden sm:flex flex-col items-end"><span class="font-label-sm text-label-sm text-on-primary leading-tight">Carlos Eduardo</span><div class="flex items-center gap-1"><span class="font-body-sm text-body-sm text-on-primary-container">Setor TI</span><span class="px-1.5 py-0.2 rounded bg-surface/20 text-on-primary font-label-sm text-[10px] uppercase font-semibold">Admin</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full">
+<!-- Sub-header / Page Title context bar -->
+<section class="w-full bg-surface-container-low py-space-lg px-gutter lg:px-margin-lg shadow-sm">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+<span>Catálogo &amp; Controle de Ativos</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Insumos em Estoque</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Inventário Operacional &amp; Suprimentos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Gerenciamento dinâmico de insumos de TI, níveis de segurança e requisições departamentais.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="h-10 px-space-md bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs shadow-sm hover:bg-secondary-container transition-colors" id="btnOpenNewItemModal">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span>Novo Insumo</span>
+</button>
+<button class="h-10 w-10 bg-surface-container text-on-surface rounded-lg flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm" id="btnRefreshCatalog" title="Sincronizar com Supabase">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Content Body -->
+<div class="w-full max-w-[1600px] mx-auto px-gutter lg:px-margin-lg py-space-xl flex flex-col gap-space-xl">
+<!-- 1. KPI Metric Tiles -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Itens Cadastrados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Itens Cadastrados</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">category</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">tipos ativos</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 100% catalogados
+          </span>
+<span class="text-[11px] text-outline">Tabela items</span>
+</div>
+</div>
+<!-- KPI 2: Unidades em Estoque -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Unidades Físicas</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">apps</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">88</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">unidades totais</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-on-surface-variant">Capacidade de almoxarifado</span>
+<span class="text-secondary font-semibold font-label-sm">82%</span>
+</div>
+</div>
+<!-- KPI 3: Alertas de Estoque Baixo -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-error">Estoque Crítico</span>
+<div class="w-10 h-10 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display text-display text-error font-bold">1</span>
+<span class="font-label-sm text-label-sm text-error">item abaixo do mín.</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-error">
+<span class="font-medium text-[11px] truncate">Cabo HDMI 2.0 (3/5 un)</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] uppercase font-bold">Ação Imediata</span>
+</div>
+</div>
+<!-- KPI 4: Requisições Pendentes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Requisições Pendentes</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">aguardando análise</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-on-surface-variant">Fila de distribuição</span>
+<a class="text-secondary font-label-sm text-[12px] font-semibold hover:underline" data-path="aprovacao-admin" href="#">Ver fila →</a>
+</div>
+</div>
+</section>
+<!-- 2. Interactive Toolbar & Filters -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search bar -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container transition-all" id="searchInput" placeholder="Buscar por insumo, código, descrição ou categoria..." type="text">
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clearSearch">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Filter Badges / Selectors -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Categoria Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="cat-pill active px-3 py-1 font-label-md text-label-md rounded-md bg-primary text-on-primary transition-all" data-cat="all">Todas</button>
+<button class="cat-pill px-3 py-1 font-label-md text-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-cat="Papelaria">Papelaria</button>
+<button class="cat-pill px-3 py-1 font-label-md text-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-cat="Impressão">Impressão</button>
+<button class="cat-pill px-3 py-1 font-label-md text-label-md rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-cat="Periféricos">Periféricos</button>
+</div>
+<!-- Status Dropdown Filter -->
+<div class="relative">
+<select class="h-10 px-3 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg cursor-pointer focus:outline-none" id="statusFilter">
+<option value="all">Status: Todos</option>
+<option value="disponivel">Em Estoque</option>
+<option value="baixo">Estoque Baixo (Crítico)</option>
+</select>
+</div>
+<div class="hidden sm:flex items-center text-outline text-label-sm font-label-sm ml-auto">
+<span id="filteredCount">5 itens listados</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Grid of Inventory Items -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="itemsGrid">
+<!-- Item 1: Resma de Papel A4 -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md" data-category="Papelaria" data-id="ITM-001" data-min="10" data-name="Resma de Papel A4" data-status="disponivel" data-stock="50">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed-variant font-label-sm text-[11px] uppercase tracking-wide font-semibold">
+                Papelaria
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] uppercase tracking-wide font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Disponível
+              </span>
+</div>
+<div class="flex gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[32px]">description</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">SKU: SUP-A4-500F</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Resma de Papel A4</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Caixa/Pacote com 500 folhas A4 75g/m² para impressoras departamentais.</p>
+</div>
+</div>
+<!-- Stock meter -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Estoque Físico</span>
+<span class="text-on-surface font-semibold">50 un <span class="text-outline font-normal">(Mín: 10)</span></span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 83%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-[12px] font-label-sm text-outline">Local: Almoxarifado A-02</span>
+<button class="btnRequestItem px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-primary-container transition-colors shadow-sm" data-id="ITM-001" data-name="Resma de Papel A4" data-stock="50">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Solicitar Item</span>
+</button>
+</div>
+</article>
+<!-- Item 2: Toner Impressora HP Laser -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md" data-category="Impressão" data-id="ITM-002" data-min="2" data-name="Toner Impressora HP Laser" data-status="disponivel" data-stock="8">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed-variant font-label-sm text-[11px] uppercase tracking-wide font-semibold">
+                Impressão
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] uppercase tracking-wide font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Disponível
+              </span>
+</div>
+<div class="flex gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[32px]">print</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">SKU: TON-HP-058A</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Toner Impressora HP Laser</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Toner preto administrativo padrão CF258A para LaserJet Pro M404/M428.</p>
+</div>
+</div>
+<!-- Stock meter -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Estoque Físico</span>
+<span class="text-on-surface font-semibold">8 un <span class="text-outline font-normal">(Mín: 2)</span></span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-[12px] font-label-sm text-outline">Local: Gaveta B-12</span>
+<button class="btnRequestItem px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-primary-container transition-colors shadow-sm" data-id="ITM-002" data-name="Toner Impressora HP Laser" data-stock="8">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Solicitar Item</span>
+</button>
+</div>
+</article>
+<!-- Item 3: Mouse USB Óptico -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md" data-category="Periféricos" data-id="ITM-003" data-min="3" data-name="Mouse USB Óptico" data-status="disponivel" data-stock="15">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed-variant font-label-sm text-[11px] uppercase tracking-wide font-semibold">
+                Periféricos
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] uppercase tracking-wide font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Disponível
+              </span>
+</div>
+<div class="flex gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[32px]">mouse</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">SKU: PER-MOU-001</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Mouse USB Óptico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Mouse preto padrão USB com 1000 DPI e 3 botões ergonômicos.</p>
+</div>
+</div>
+<!-- Stock meter -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Estoque Físico</span>
+<span class="text-on-surface font-semibold">15 un <span class="text-outline font-normal">(Mín: 3)</span></span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-[12px] font-label-sm text-outline">Local: Rack TI Central</span>
+<button class="btnRequestItem px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-primary-container transition-colors shadow-sm" data-id="ITM-003" data-name="Mouse USB Óptico" data-stock="15">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Solicitar Item</span>
+</button>
+</div>
+</article>
+<!-- Item 4: Teclado ABNT2 USB -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md" data-category="Periféricos" data-id="ITM-004" data-min="3" data-name="Teclado ABNT2 USB" data-status="disponivel" data-stock="12">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed-variant font-label-sm text-[11px] uppercase tracking-wide font-semibold">
+                Periféricos
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] uppercase tracking-wide font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Disponível
+              </span>
+</div>
+<div class="flex gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[32px]">keyboard</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-outline">SKU: PER-KBD-002</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Teclado ABNT2 USB</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Teclado com fio padrão ABNT2 com teclado numérico e membrana silenciosa.</p>
+</div>
+</div>
+<!-- Stock meter -->
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Estoque Físico</span>
+<span class="text-on-surface font-semibold">12 un <span class="text-outline font-normal">(Mín: 3)</span></span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 70%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-[12px] font-label-sm text-outline">Local: Rack TI Central</span>
+<button class="btnRequestItem px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-primary-container transition-colors shadow-sm" data-id="ITM-004" data-name="Teclado ABNT2 USB" data-stock="12">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Solicitar Item</span>
+</button>
+</div>
+</article>
+<!-- Item 5: Cabo HDMI 2.0 2m (CRITICAL ITEM) -->
+<article class="inventory-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md ring-2 ring-error/30" data-category="Periféricos" data-id="ITM-005" data-min="5" data-name="Cabo HDMI 2.0 2m" data-status="baixo" data-stock="3">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed-variant font-label-sm text-[11px] uppercase tracking-wide font-semibold">
+                Periféricos
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] uppercase tracking-wide font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                Estoque Baixo (3/5)
+              </span>
+</div>
+<div class="flex gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-xl bg-error-container/20 flex items-center justify-center shrink-0 text-error">
+<span class="material-symbols-outlined text-[32px]">cable</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-label-sm text-label-sm text-error font-medium">SKU: CAB-HDM-02M</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Cabo HDMI 2.0 2m</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Cabo blindado reforçado 4K UltraHD com pontas banhadas a ouro.</p>
+</div>
+</div>
+<!-- Stock meter warning -->
+<div class="bg-error-container/15 p-space-sm rounded-lg mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-error font-medium">Nível Crítico</span>
+<span class="text-error font-bold">3 un <span class="text-on-surface-variant font-normal">(Mínimo: 5 un)</span></span>
+</div>
+<div class="w-full h-2 bg-error-container/40 rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-[12px] font-label-sm text-error font-medium">Local: Gaveta C-04</span>
+<button class="btnRequestItem px-space-md py-space-xs bg-error text-on-error rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-error/90 transition-colors shadow-sm" data-id="ITM-005" data-name="Cabo HDMI 2.0 2m" data-stock="3">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Solicitar Item</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Empty state when search yields no matches -->
+<div class="hidden py-16 flex-col items-center justify-center text-center" id="noResultsState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[36px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Nenhum insumo encontrado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-sm">Tente redefinir os filtros por categoria ou verifique a ortografia do termo pesquisado.</p>
+<button class="mt-4 px-4 py-2 bg-surface-container-high text-primary rounded-lg font-label-md text-label-md hover:bg-surface-variant" id="btnResetFilters">Limpar Filtros</button>
+</div>
+</section>
+<!-- 4. Supabase Backend Realtime Configuration Showcase Bar -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Conexão Backend Supabase</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-[11px] uppercase font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                Em Sincronia Real-Time
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Esquemas configurados para autenticação, regras RLS e triggers de auditoria nas tabelas <code class="px-1 py-0.5 rounded bg-surface-container text-primary font-mono text-[12px]">items</code> e <code class="px-1 py-0.5 rounded bg-surface-container text-primary font-mono text-[12px]">requisitions</code>.
+            </p>
+</div>
+</div>
+<!-- Connection parameters visual tags -->
+<div class="w-full lg:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm bg-surface-container-low p-space-sm rounded-lg text-label-sm font-label-sm">
+<div class="flex flex-col">
+<span class="text-outline text-[10px] uppercase font-semibold">SUPABASE_URL</span>
+<div class="flex items-center gap-1 text-on-surface font-mono text-[12px]">
+<span class="text-secondary material-symbols-outlined text-[14px]">link</span>
+<span>https://stockti-infra.supabase.co</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-container hidden sm:block"></div>
+<div class="flex flex-col">
+<span class="text-outline text-[10px] uppercase font-semibold">SUPABASE_ANON_KEY</span>
+<div class="flex items-center gap-1 text-on-surface font-mono text-[12px]">
+<span class="text-secondary material-symbols-outlined text-[14px]">key</span>
+<span class="truncate max-w-[140px]">eyJhbGciOiJIUzI1NiIsInR5cCI6...</span>
+<button class="text-outline hover:text-primary" title="Copiar anon key">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Quick Requisition Modal -->
+<div class="fixed inset-0 z-50 bg-tertiary/60 backdrop-blur-sm hidden items-center justify-center p-gutter" id="requestModal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Nova Requisição Rápida</h3>
+<span class="font-label-sm text-label-sm text-outline">Registro com baixa imediata em fila de triagem</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" id="btnCloseModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<form class="p-space-lg flex flex-col gap-space-md" id="quickRequestForm">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Item Selecionado</label>
+<input class="w-full h-10 px-3 bg-surface-container-low font-label-lg text-label-lg font-semibold text-primary rounded-lg cursor-not-allowed" id="modalItemName" readonly="" type="text">
+<input id="modalItemId" type="hidden">
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Quantidade Requisitada *</label>
+<div class="flex items-center">
+<input class="w-full h-10 px-3 bg-surface-container text-on-surface font-body-md text-body-md rounded-lg focus:outline-none" id="modalQty" max="50" min="1" required="" type="number" value="1">
+</div>
+<span class="font-body-sm text-[11px] text-outline mt-1 block" id="modalStockHelper">Estoque disponível: 50 un</span>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Setor Destino *</label>
+<select class="w-full h-10 px-3 bg-surface-container text-on-surface font-label-md text-label-md rounded-lg focus:outline-none" id="modalDepartment" required="">
+<option value="Administrativo">Administrativo</option>
+<option value="Desenvolvimento / TI">Desenvolvimento / TI</option>
+<option value="Financeiro">Financeiro</option>
+<option value="Recursos Humanos">Recursos Humanos</option>
+<option value="Operações">Operações</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Justificativa / Motivo de Uso</label>
+<textarea class="w-full p-3 bg-surface-container text-on-surface font-body-md text-body-md rounded-lg focus:outline-none resize-none placeholder-outline" id="modalJustification" placeholder="Ex: Substituição de periférico danificado na estação W-12..." rows="3"></textarea>
+</div>
+<!-- Feedback alert -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container text-secondary text-body-sm font-medium flex items-center gap-2" id="modalAlert">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>A requisição passará pelo fluxo de autorização do administrador.</span>
+</div>
+<!-- Footer Actions -->
+<div class="pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md hover:bg-surface-container rounded-lg transition-colors" id="btnCancelModal" type="button">
+            Cancelar
+          </button>
+<button class="px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md rounded-lg flex items-center gap-1 shadow-sm hover:bg-secondary-container transition-colors" id="btnSubmitModal" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Confirmar Solicitação</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-space-md py-space-sm bg-inverse-surface text-inverse-on-surface rounded-xl shadow-xl max-w-md" id="toastNotification">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold" id="toastTitle">Requisição Registrada</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80" id="toastMsg">Item enviado para triagem do Supabase.</span>
+</div>
+</div>
+<script>
+    (function initStockTI() {
+      // Elements
+      const searchInput = document.getElementById('searchInput');
+      const clearSearch = document.getElementById('clearSearch');
+      const catPills = document.querySelectorAll('.cat-pill');
+      const statusFilter = document.getElementById('statusFilter');
+      const items = Array.from(document.querySelectorAll('.inventory-card'));
+      const filteredCount = document.getElementById('filteredCount');
+      const noResultsState = document.getElementById('noResultsState');
+      const btnResetFilters = document.getElementById('btnResetFilters');
+
+      // Modal elements
+      const requestModal = document.getElementById('requestModal');
+      const btnCloseModal = document.getElementById('btnCloseModal');
+      const btnCancelModal = document.getElementById('btnCancelModal');
+      const quickRequestForm = document.getElementById('quickRequestForm');
+      const modalItemName = document.getElementById('modalItemName');
+      const modalItemId = document.getElementById('modalItemId');
+      const modalQty = document.getElementById('modalQty');
+      const modalStockHelper = document.getElementById('modalStockHelper');
+
+      // Toast elements
+      const toast = document.getElementById('toastNotification');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMsg = document.getElementById('toastMsg');
+
+      let currentCategory = 'all';
+
+      function showToast(title, msg) {
+        toastTitle.textContent = title;
+        toastMsg.textContent = msg;
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-24', 'opacity-0');
+        }, 3800);
+      }
+
+      function filterItems() {
+        const query = (searchInput.value || '').trim().toLowerCase();
+        const selectedStatus = statusFilter.value;
+        let visibleCount = 0;
+
+        items.forEach(card => {
+          const name = card.getAttribute('data-name').toLowerCase();
+          const cat = card.getAttribute('data-category');
+          const id = card.getAttribute('data-id').toLowerCase();
+          const status = card.getAttribute('data-status');
+
+          const matchesQuery = !query || name.includes(query) || id.includes(query) || cat.toLowerCase().includes(query);
+          const matchesCategory = currentCategory === 'all' || cat === currentCategory;
+          const matchesStatus = selectedStatus === 'all' || status === selectedStatus;
+
+          if (matchesQuery && matchesCategory && matchesStatus) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        filteredCount.textContent = visibleCount + (visibleCount === 1 ? ' item listado' : ' itens listados');
+
+        if (visibleCount === 0) {
+          noResultsState.classList.remove('hidden');
+          noResultsState.classList.add('flex');
+        } else {
+          noResultsState.classList.add('hidden');
+          noResultsState.classList.remove('flex');
+        }
+
+        clearSearch.classList.toggle('hidden', !searchInput.value);
+      }
+
+      // Category filter buttons
+      catPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          catPills.forEach(p => {
+            p.classList.remove('bg-primary', 'text-on-primary', 'active');
+            p.classList.add('text-on-surface-variant');
+          });
+          pill.classList.remove('text-on-surface-variant');
+          pill.classList.add('bg-primary', 'text-on-primary', 'active');
+          currentCategory = pill.getAttribute('data-cat');
+          filterItems();
+        });
+      });
+
+      // Search and dropdown events
+      searchInput.addEventListener('input', filterItems);
+      statusFilter.addEventListener('change', filterItems);
+
+      clearSearch.addEventListener('click', () => {
+        searchInput.value = '';
+        filterItems();
+        searchInput.focus();
+      });
+
+      btnResetFilters.addEventListener('click', () => {
+        searchInput.value = '';
+        statusFilter.value = 'all';
+        catPills[0].click();
+      });
+
+      // Quick Request Modal
+      document.querySelectorAll('.btnRequestItem').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const itemName = btn.getAttribute('data-name');
+          const itemId = btn.getAttribute('data-id');
+          const stock = btn.getAttribute('data-stock');
+
+          modalItemName.value = itemName;
+          modalItemId.value = itemId;
+          modalQty.max = stock;
+          modalQty.value = '1';
+          modalStockHelper.textContent = 'Estoque físico disponível: ' + stock + ' unidades';
+
+          requestModal.classList.remove('hidden');
+          requestModal.classList.add('flex');
+        });
+      });
+
+      function closeModal() {
+        requestModal.classList.add('hidden');
+        requestModal.classList.remove('flex');
+        quickRequestForm.reset();
+      }
+
+      btnCloseModal.addEventListener('click', closeModal);
+      btnCancelModal.addEventListener('click', closeModal);
+      requestModal.addEventListener('click', (e) => {
+        if (e.target === requestModal) closeModal();
+      });
+
+      quickRequestForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const item = modalItemName.value;
+        const qty = modalQty.value;
+        const dept = document.getElementById('modalDepartment').value;
+
+        closeModal();
+        showToast('Solicitação enviada!', qty + 'x ' + item + ' solicitado para o setor ' + dept + '.');
+      });
+
+      // Synchronize trigger
+      const btnRefreshCatalog = document.getElementById('btnRefreshCatalog');
+      if (btnRefreshCatalog) {
+        btnRefreshCatalog.addEventListener('click', () => {
+          btnRefreshCatalog.querySelector('span').classList.add('animate-spin');
+          setTimeout(() => {
+            btnRefreshCatalog.querySelector('span').classList.remove('animate-spin');
+            showToast('Sincronizado!', 'Catálogo sincronizado com a tabela Supabase items.');
+          }, 600);
+        });
+      }
+
+      // New item modal placeholder trigger
+      const btnOpenNewItemModal = document.getElementById('btnOpenNewItemModal');
+      if (btnOpenNewItemModal) {
+        btnOpenNewItemModal.addEventListener('click', () => {
+          showToast('Módulo Administrativo', 'Para cadastrar novos insumos, utilize o painel de aprovação ou schema Supabase.');
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-gutter lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div>© 2025 StockTI. Suporte Interno de Infraestrutura e Logística.</div><div class="flex items-center gap-space-md"><span>Central de TI: Ramal 4022</span><span>Versão 2.4.0</span></div></div></footer><div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

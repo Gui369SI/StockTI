@@ -1,0 +1,213 @@
+<!DOCTYPE html><html class="h-full bg-slate-50" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StockTI - Sistema Interno de Requisição e Controle de Insumos</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#1E3A8A',
+              royal: '#2563EB',
+              royalHover: '#1d4ed8',
+              slateBg: '#F8FAFC',
+              dark: '#0F172A',
+              muted: '#64748B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'custom-card': '0 20px 40px -15px rgba(30, 58, 138, 0.08), 0 0 1px 1px rgba(226, 232, 240, 0.8)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Specific Styles -->
+<style data-purpose="background-pattern">
+    /* Subtle geometric grid background pattern for corporate tech feel */
+    .bg-tech-grid {
+      background-color: #F8FAFC;
+      background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px), radial-gradient(#cbd5e1 0.75px, #F8FAFC 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+  </style>
+</head>
+<body class="min-h-full font-sans antialiased text-brand-dark bg-tech-grid flex flex-col justify-between selection:bg-brand-royal selection:text-white">
+<!-- BEGIN: TopBar -->
+<header class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-30 px-4 sm:px-8 py-2.5 shadow-xs">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+<div class="flex items-center space-x-2 text-brand-dark font-medium">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-brand-navy">
+          StockTI
+        </span>
+<span class="text-slate-400">•</span>
+<span class="text-brand-muted hidden sm:inline">Portal Interno de Suporte e Logística</span>
+</div>
+<!-- System Connection Status Badge -->
+<div class="flex items-center gap-2">
+<div class="flex items-center px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-medium text-xs">
+<span class="relative flex h-2 w-2 mr-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+          Supabase Auth Conectado
+        </div>
+</div>
+</div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-10">
+<div class="w-full max-w-md mx-auto flex flex-col justify-center">
+<!-- Left / Center: Authentication Card -->
+<div class="w-full bg-white rounded-2xl border border-slate-200 shadow-custom-card p-8 sm:p-10 relative overflow-hidden" data-purpose="auth-card">
+<!-- Header Info within Card -->
+<div class="text-center flex flex-col items-center mb-6"><div class="relative inline-block mb-3"><img alt="Logo StockTI" class="w-16 h-16 object-contain transition-transform hover:scale-105 duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBExpcyBxjdKNPNUoKn7xng9FXBrRCEgTyr7Kx-AzCt5PreVTZILYmoyrycV7EC03kHwfZK1gjzsrfKAAPRm1DA8OxSVE4NBSV3xXR1vILMF9sdHmqrBnCSwvh8_0GspLFMOPANE751DEoSeu-T6gLMuRur6Iu7uo40xH75wbwk6iYHTZSK9eG4XK9QvBC_R2ZLjmuLpNSkuU0t0sIuD5eQAPWUkki05sWhZdIxGh3qa_FM9OnfSlHKl5-aIOF2XfPefw"><span class="absolute -bottom-1 -right-2 inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-blue-50 text-brand-royal border border-blue-200">v2.4</span></div><h1 class="text-2xl font-bold tracking-tight text-brand-navy">StockTI</h1><p class="text-sm text-brand-muted mt-1">Acesse com seu e-mail corporativo</p></div>
+<!-- Role Quick-Switcher / Demo Modes -->
+
+<!-- Login Form -->
+<form class="space-y-4" data-purpose="login-form" onsubmit="event.preventDefault(); handleAuthSubmit();">
+<!-- Corporate Email Input -->
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5" for="email-address">
+              E-mail Corporativo
+            </label>
+<div class="relative rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input autocomplete="email" class="block w-full pl-10 pr-3 py-2.5 text-sm text-brand-dark bg-white border border-slate-300 rounded-lg placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-royal focus:border-brand-royal transition duration-150" id="email-address" name="email" placeholder="usuario@empresa.com.br" required="" type="email" value="carlos.eduardo@empresa.com.br">
+</div>
+</div>
+<!-- Password Input with Toggle Visibility -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700" for="password">
+                Senha
+              </label>
+<a class="text-xs font-medium text-brand-royal hover:underline hover:text-brand-royalHover" href="#">
+                Esqueceu a senha?
+              </a>
+</div>
+<div class="relative rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input autocomplete="current-password" class="block w-full pl-10 pr-10 py-2.5 text-sm text-brand-dark bg-white border border-slate-300 rounded-lg placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-royal focus:border-brand-royal transition duration-150" id="password" name="password" placeholder="••••••••••••" required="" type="password" value="••••••••••••">
+<button aria-label="Alternar visibilidade de senha" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none" id="toggle-password-btn" onclick="togglePasswordVisibility()" type="button">
+<!-- Eye Icon -->
+<svg class="h-5 w-5 block" fill="none" id="eye-icon" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<!-- Eye Off Icon (hidden by default) -->
+<svg class="h-5 w-5 hidden" fill="none" id="eye-off-icon" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Remember Me Checkbox -->
+<div class="flex items-center pt-1">
+<input checked="" class="h-4 w-4 text-brand-royal focus:ring-brand-royal border-slate-300 rounded cursor-pointer" id="remember-me" name="remember-me" type="checkbox">
+<label class="ml-2 block text-xs sm:text-sm text-slate-600 select-none cursor-pointer" for="remember-me">Lembrar acesso</label>
+</div>
+<!-- Primary Submit Button -->
+<div class="pt-2">
+<button class="w-full inline-flex justify-center items-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-brand-navy hover:bg-brand-royal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-royal transition-colors duration-200 group" type="submit"><span class="">Entrar</span><svg class="ml-2 -mr-0.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</form>
+<!-- Divider -->
+<div class="relative my-6">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-wider">
+<span class="bg-white px-3 text-slate-400 font-medium">ou acesse com</span>
+</div>
+</div>
+<!-- SSO Button -->
+<div>
+<button class="w-full inline-flex justify-center items-center py-2.5 px-4 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-xs sm:text-sm font-medium text-slate-700 shadow-xs focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-slate-400 transition-colors" onclick="simulateSSO()" type="button"><svg class="h-4 w-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z"></path></svg>Entrar com SSO Corporativo</button>
+</div>
+</div>
+<!-- Right: Informative Side Card / RBAC & Security Context -->
+
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: PageFooter -->
+<footer class="w-full bg-white border-t border-slate-200 py-4 px-4 text-center text-xs text-brand-muted"><div class="max-w-md mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-xs text-slate-500"><span class="">© 2025 StockTI</span><span class="">•</span><span class="">Suporte TI: <strong class="text-slate-700 font-medium">Ramal 4022</strong></span></div></footer>
+<!-- END: PageFooter -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="auth-interactivity">
+    // Switch Profile demo modes between Colaborador and Gestor TI
+    function switchProfile(role) {
+      const emailInput = document.getElementById('email-address');
+      const tabColaborador = document.getElementById('tab-colaborador');
+      const tabGestor = document.getElementById('tab-gestor');
+      const codeSnippetEmail = document.getElementById('code-email');
+
+      if (role === 'colaborador') {
+        emailInput.value = 'carlos.eduardo@empresa.com.br';
+        codeSnippetEmail.textContent = "'carlos.eduardo@empresa.com.br'";
+        
+        tabColaborador.className = 'flex-1 py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-150 text-white bg-brand-royal shadow-sm';
+        tabGestor.className = 'flex-1 py-2 px-3 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 text-slate-600 hover:text-brand-dark hover:bg-slate-200/60';
+      } else {
+        emailInput.value = 'admin.ti@empresa.com.br';
+        codeSnippetEmail.textContent = "'admin.ti@empresa.com.br'";
+        
+        tabGestor.className = 'flex-1 py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-150 text-white bg-brand-navy shadow-sm';
+        tabColaborador.className = 'flex-1 py-2 px-3 text-xs sm:text-sm font-medium rounded-lg transition-all duration-150 text-slate-600 hover:text-brand-dark hover:bg-slate-200/60';
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eye-icon');
+      const eyeOffIcon = document.getElementById('eye-off-icon');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.classList.add('hidden');
+        eyeOffIcon.classList.remove('hidden');
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.classList.remove('hidden');
+        eyeOffIcon.classList.add('hidden');
+      }
+    }
+
+    // Mock Submit Handler
+    function handleAuthSubmit() {
+      const email = document.getElementById('email-address').value;
+      alert(`Simulação de login StockTI disparada para: ${email}\nAutenticando via Supabase Auth...`);
+    }
+
+    // Mock SSO Handler
+    function simulateSSO() {
+      alert('Redirecionando para o Gateway Corporativo Microsoft 365 / Google Workspace...');
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+
+
+</body></html>
