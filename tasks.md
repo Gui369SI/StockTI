@@ -16,3 +16,7 @@
 ## Tarefa 3: Regras de Negócio e Prevenção de Erros
 - [ ] Validar se o insumo possui quantidade disponível no estoque antes de permitir a solicitação.
 - [ ] Exibir aviso visual caso o usuário já possua uma solicitação pendente para o mesmo item.
+
+## 🛠️ Ajustes Solicitados (Sprint de Correção)
+- [ ] Redirecionar a rota inicial (`index.html`) para a tela de Login.
+- [ ] Limpar container HTML na exibição dos insumos para evitar duplicação com dados do Supabase.
