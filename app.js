@@ -1,6 +1,6 @@
 /**
  * StockTI - Application Logic
- * Integrates Supabase with SPA Views (Insumos, Nova Solicitação, Minhas Requisições, Painel Admin)
+ * Integrates Supabase with SPA Views (Login, Insumos, Nova Solicitação, Minhas Requisições, Painel Admin)
  */
 
 // 1. SUPABASE CLIENT CONFIGURATION
@@ -9,13 +9,9 @@ const SUPABASE_ANON_KEY = 'sb_publishable_MeUyT7SMIXpHhEmhl0kGnA_dUF9h29u';
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// STATE
-let currentUser = {
-  id: '0ced722f-47bc-4ecb-8efc-38e536206923', // Default Admin Carlos Eduardo
-  email: 'carlos.eduardo@empresa.com.br',
-  full_name: 'Carlos Eduardo',
-  role: 'admin'
-};
+// AUTH STATE (Default: Not authenticated -> Requires login)
+let isAuthenticated = false;
+let currentUser = null;
 
 let cachedItems = [];
 let cachedCategories = [];
@@ -25,10 +21,8 @@ let cachedRequisitions = [];
 document.addEventListener('DOMContentLoaded', async () => {
   initRouting();
   await loadCategories();
-  await loadUserProfiles();
-  updateHeaderUserDisplay();
 
-  // Handle hash route or default to #insumos
+  // Handle hash route or default to #login if unauthenticated
   handleHashChange();
   window.addEventListener('hashchange', handleHashChange);
 });
@@ -45,7 +39,7 @@ function initRouting() {
   const btnSwitchUser = document.getElementById('btn-switch-user');
   if (btnSwitchUser) {
     btnSwitchUser.addEventListener('click', () => {
-      // Toggle between Colaborador and Admin
+      if (!isAuthenticated) return;
       if (currentUser.role === 'admin') {
         selectLoginProfile('solicitante');
       } else {
@@ -57,11 +51,33 @@ function initRouting() {
 }
 
 function handleHashChange() {
-  const hash = window.location.hash.replace('#', '') || 'insumos';
-  showView(hash);
+  let hash = window.location.hash.replace('#', '');
+
+  // Mandatory Login Redirect Rule
+  if (!isAuthenticated && hash !== 'login') {
+    window.location.hash = 'login';
+    return;
+  }
+
+  if (isAuthenticated && (!hash || hash === 'login')) {
+    window.location.hash = 'insumos';
+    return;
+  }
+
+  showView(hash || 'login');
 }
 
 function showView(viewId) {
+  // Hide header navigation elements if not authenticated
+  const loggedInNavs = document.querySelectorAll('.nav-logged-in');
+  loggedInNavs.forEach(el => {
+    if (isAuthenticated) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  });
+
   // Hide all view sections
   document.querySelectorAll('.view-section').forEach(section => {
     section.classList.add('hidden');
@@ -79,7 +95,6 @@ function showView(viewId) {
   const targetSection = document.getElementById(`view-${viewId}`);
   if (targetSection) {
     targetSection.classList.remove('hidden');
-    // Load view specific data
     switch (viewId) {
       case 'insumos':
         loadInsumosView();
@@ -94,28 +109,17 @@ function showView(viewId) {
         loadAdminView();
         break;
       case 'login':
-        // Login view handles itself
+        // Login view
         break;
       default:
         loadInsumosView();
     }
   } else {
-    // Default fallback
-    document.getElementById('view-insumos').classList.remove('hidden');
-    loadInsumosView();
+    document.getElementById('view-login').classList.remove('hidden');
   }
 }
 
 // 3. USER MANAGEMENT & PROFILES
-async function loadUserProfiles() {
-  const { data: profiles, error } = await supabaseClient.from('profiles').select('*');
-  if (!error && profiles && profiles.length > 0) {
-    // Sync current user with real DB profiles
-    const admin = profiles.find(p => p.role === 'admin');
-    if (admin) currentUser = admin;
-  }
-}
-
 function selectLoginProfile(role) {
   if (role === 'admin') {
     currentUser = {
@@ -124,6 +128,10 @@ function selectLoginProfile(role) {
       full_name: 'Carlos Eduardo',
       role: 'admin'
     };
+    document.getElementById('login-email').value = 'carlos.eduardo@empresa.com.br';
+    document.getElementById('login-name').value = 'Carlos Eduardo';
+    document.getElementById('tab-login-admin').className = 'flex-1 py-2 px-3 text-xs font-semibold rounded-lg text-white bg-brand-royal shadow-sm transition-all';
+    document.getElementById('tab-login-colaborador').className = 'flex-1 py-2 px-3 text-xs font-medium rounded-lg text-slate-600 hover:text-brand-dark transition-all';
   } else {
     currentUser = {
       id: 'fe59b730-b832-4a13-b87f-0b346bccdeb8',
@@ -131,15 +139,21 @@ function selectLoginProfile(role) {
       full_name: 'João Silva',
       role: 'solicitante'
     };
+    document.getElementById('login-email').value = 'solicitante@empresa.com.br';
+    document.getElementById('login-name').value = 'João Silva';
+    document.getElementById('tab-login-colaborador').className = 'flex-1 py-2 px-3 text-xs font-semibold rounded-lg text-white bg-brand-royal shadow-sm transition-all';
+    document.getElementById('tab-login-admin').className = 'flex-1 py-2 px-3 text-xs font-medium rounded-lg text-slate-600 hover:text-brand-dark transition-all';
   }
-  updateHeaderUserDisplay();
 
-  // Refresh current view if needed
-  const currentView = window.location.hash.replace('#', '') || 'insumos';
-  showView(currentView);
+  if (isAuthenticated) {
+    updateHeaderUserDisplay();
+    const currentView = window.location.hash.replace('#', '') || 'insumos';
+    showView(currentView);
+  }
 }
 
 function updateHeaderUserDisplay() {
+  if (!currentUser) return;
   document.getElementById('header-user-name').textContent = currentUser.full_name;
   document.getElementById('header-user-role').textContent = currentUser.role === 'admin' ? 'Gestor TI (Admin)' : 'Colaborador';
 }
@@ -148,11 +162,30 @@ function handleLoginSubmit(event) {
   event.preventDefault();
   const email = document.getElementById('login-email').value;
   const name = document.getElementById('login-name').value;
-  currentUser.email = email;
-  currentUser.full_name = name;
+
+  if (!currentUser) {
+    currentUser = {
+      id: '0ced722f-47bc-4ecb-8efc-38e536206923',
+      email: email,
+      full_name: name,
+      role: 'admin'
+    };
+  } else {
+    currentUser.email = email;
+    currentUser.full_name = name;
+  }
+
+  isAuthenticated = true;
   updateHeaderUserDisplay();
-  showToast('Acesso Realizado', `Bem-vindo(a), ${name}!`);
+  showToast('Acesso Concedido', `Bem-vindo(a), ${name}!`);
   window.location.hash = 'insumos';
+}
+
+function handleLogout() {
+  isAuthenticated = false;
+  currentUser = null;
+  showToast('Sessão Encerrada', 'Você saiu do sistema StockTI.');
+  window.location.hash = 'login';
 }
 
 // 4. DATA FETCHING - CATEGORIES & ITEMS
@@ -190,7 +223,14 @@ async function fetchItemsFromSupabase() {
     .order('created_at', { ascending: false });
 
   if (!error && data) {
-    cachedItems = data;
+    // Prevent duplicated entries by filtering unique item IDs
+    const uniqueMap = new Map();
+    data.forEach(item => {
+      if (!uniqueMap.has(item.id)) {
+        uniqueMap.set(item.id, item);
+      }
+    });
+    cachedItems = Array.from(uniqueMap.values());
   } else {
     console.error('Erro ao carregar insumos:', error);
   }
@@ -216,7 +256,7 @@ function renderInsumosKPIs(items) {
 
 function renderInsumosGrid(items) {
   const grid = document.getElementById('insumos-grid');
-  grid.innerHTML = '';
+  grid.innerHTML = ''; // CLEAR CONTAINER BEFORE RENDERING (Prevents duplications)
 
   if (items.length === 0) {
     grid.innerHTML = `
@@ -324,11 +364,11 @@ async function loadNovaSolicitacaoView() {
     </option>`;
   });
 
-  // Check pending requisitions for current user to show alert if any
   checkPendingRequestsForAlert();
 }
 
 async function checkPendingRequestsForAlert() {
+  if (!currentUser) return;
   const alertBox = document.getElementById('pending-request-alert');
   const alertMsg = document.getElementById('pending-request-alert-msg');
 
@@ -360,7 +400,6 @@ function handleSolicitacaoItemChange() {
     if (parseInt(inputQty.value) > item.quantity_stock) {
       inputQty.value = item.quantity_stock;
     }
-    // Check if user already has pending request for THIS specific item
     checkPendingForSpecificItem(item.id, item.name);
   } else {
     hint.textContent = 'Selecione um item para ver o estoque';
@@ -368,6 +407,7 @@ function handleSolicitacaoItemChange() {
 }
 
 async function checkPendingForSpecificItem(itemId, itemName) {
+  if (!currentUser) return;
   const { data: pending, error } = await supabaseClient
     .from('requisitions')
     .select('*')
@@ -401,6 +441,8 @@ function validateSolicitacaoQty() {
 
 async function handleNovaSolicitacaoSubmit(event) {
   event.preventDefault();
+  if (!currentUser) return;
+
   const itemId = document.getElementById('select-item-solicitacao').value;
   const quantity = parseInt(document.getElementById('input-qtd-solicitacao').value);
   const justification = document.getElementById('input-justificativa').value;
@@ -420,7 +462,6 @@ async function handleNovaSolicitacaoSubmit(event) {
   btn.disabled = true;
   btn.textContent = 'Enviando...';
 
-  // Insert into requisitions table
   const { data, error } = await supabaseClient
     .from('requisitions')
     .insert([{
@@ -450,6 +491,8 @@ async function loadMinhasRequisicoesView() {
   const container = document.getElementById('minhas-reqs-list');
   container.innerHTML = '<div class="text-center py-8 text-slate-500">Carregando suas requisições...</div>';
 
+  if (!currentUser) return;
+
   const { data, error } = await supabaseClient
     .from('requisitions')
     .select('*, items(name, description)')
@@ -475,7 +518,6 @@ function renderMinhasRequisicoes(filterStatus) {
     return req.status === filterStatus;
   });
 
-  // Also update KPI user reqs
   document.getElementById('kpi-user-reqs').textContent = cachedRequisitions.length;
 
   if (filtered.length === 0) {
@@ -682,7 +724,6 @@ function filterAdminReqs(status) {
   renderAdminRequisicoes(status);
 }
 
-// APPROVE REQUISITION AND DECREMENT STOCK IN `items` TABLE
 async function aprovarRequisicao(reqId, itemId, qtyRequested, currentStock) {
   if (currentStock < qtyRequested) {
     if (!confirm('Atenção: O estoque atual é menor que a quantidade solicitada! Deseja aprovar mesmo assim?')) {
@@ -692,7 +733,6 @@ async function aprovarRequisicao(reqId, itemId, qtyRequested, currentStock) {
 
   const newStock = Math.max(0, currentStock - qtyRequested);
 
-  // 1. Update requisition status to 'aprovado'
   const { error: reqError } = await supabaseClient
     .from('requisitions')
     .update({ status: 'aprovado', updated_at: new Date().toISOString() })
@@ -704,7 +744,6 @@ async function aprovarRequisicao(reqId, itemId, qtyRequested, currentStock) {
     return;
   }
 
-  // 2. Decrement quantity_stock in items table
   const { error: itemError } = await supabaseClient
     .from('items')
     .update({ quantity_stock: newStock })
